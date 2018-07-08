@@ -23,7 +23,7 @@ class RatesController extends Controller
     public function list()
 	{
 		return new Rates(
-			Rate::with('stages')->paginate(20)
+			Rate::paginate(20)
 		);
 	}
 
