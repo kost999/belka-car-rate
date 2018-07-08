@@ -19,9 +19,9 @@ class CreateStagesTable extends Migration
 			$table->string('name');
 			$table->decimal('price');
 			$table->string('unit');
-			$table->timestamp('free_initial_time');
-			$table->time('free_initial_start');
-			$table->time('free_initial_end');
+			$table->unsignedInteger('free_initial_minutes');
+			$table->time('free_time_start');
+			$table->time('free_time_end');
 			$table->decimal('free_initial_mileage');
 			$table->foreign('rate_id')
 				->references('id')
